@@ -4,22 +4,11 @@
       .inner.mxa.flex
         .copy.flex
           .copy-wrap
-            h1.tagline Tweets. Without the bullshit.
-            p.usp Readme is a purposefully feature-lite Twitter reader designed to show you the tweets you signed up to see.
+            h1.tagline Discover the things that matter to you.
+            p.usp Find out about books, podcasts and other hot topics in your timeline.
             .buttons
               .sign-in
                 el-button(:loading="tokenRequestLoading", type="primary", @click="handleSignIn") Sign in with Twitter
-              .apple
-                a(href="https://itunes.apple.com/us/app/readme/id1400305463?ls=1&mt=8")
-                  img(src='../assets/img/app-store.png')
-        .screenshot
-          img(src='../assets/img/screen.png')
-          .snaps
-            .snaps-inners
-              img(src="../assets/img/snap1.jpg")
-              img(src="../assets/img/snap2.jpg")
-              img(src="../assets/img/snap3.jpg")
-              img(src="../assets/img/snap2.jpg")
 </template>
 
 <script>
@@ -57,43 +46,6 @@ export default {
     align-items: center
     overflow: auto
 
-.screenshot
-  @media(max-width: 1200px)
-    display: none
-  img
-    width: 100%
-    border-radius: 6px
-    position: relative
-    top: calc(100vh - 83%)
-  width: 60%
-  position: relative
-  .snaps
-    position: absolute
-    background-image: url('../assets/img/outer-phone.png')
-    background-size: cover
-    width: 40%
-    height: 50%
-    bottom: 2px
-    right: -2px
-    overflow: hidden
-    .snaps-inners
-      width: 87%
-      margin: auto
-      position: relative
-      top: 55px
-      img
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        &:nth-child(4)
-          animation: xfade 16s 0s infinite
-        &:nth-child(3)
-          animation: xfade 16s 4s infinite
-        &:nth-child(2)
-          animation: xfade 16s 8s infinite
-        &:nth-child(1)
-          animation: xfade 16s 12s infinite
 
 @keyframes xfade
   17%
@@ -143,11 +95,6 @@ h1
   @media(max-width: 1200px)
     flex-direction: column
     align-items: center
-.apple
-  a
-    img
-      max-width: 100%
-      height: 54px
 .sign-in
   margin-right: 10px
   @media(max-width: 1200px)
